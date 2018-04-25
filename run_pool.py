@@ -18,6 +18,6 @@ if __name__ == '__main__':
     p2 = Process(target=getfreeip.start)
     p2.start()
 
-    p_list = [gevent.spawn(check.func_judge) for i in range(500)]
+    p_list = [gevent.spawn(check.func_judge) for i in range(300)]
 
     gevent.joinall(p_list)
